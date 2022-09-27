@@ -9,7 +9,8 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "start": "vite",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+     "deploy": "sh deploy.sh"
   },
   "dependencies": {
     "axios": "^0.27.2",
