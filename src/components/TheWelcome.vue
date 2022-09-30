@@ -2,9 +2,8 @@
 import {onMounted, ref, watchEffect} from "vue";
 
 const pokemonNameAndImageUrl = ref(null);
-
 function getAllNamesAndImageUrl() {
-  const API_URL = `http://localhost:51183/v1/pokedex/get/nameAndImage?page=1&size=100`
+  const API_URL = `https://pokedex-api01.herokuapp.com/v1/pokedex/get/nameAndImage?page=1&size=100`
   watchEffect(async () => {
     pokemonNameAndImageUrl.value = await (await fetch(API_URL, {
       mode: "cors", method: "GET", headers: {
@@ -23,7 +22,7 @@ onMounted(() => {
 <script>
 import Modal from './Modal.vue'
 
-const API_URL = 'http://localhost:51183/v1/pokedex/get/details?pokemonName='
+const API_URL = 'https://pokedex-api01.herokuapp.com/v1/pokedex/get/details?pokemonName='
 const pokemonDetails = ref(null);
 export default {
   components: {
